@@ -22,7 +22,7 @@ export default {
         "heading-02": ["2rem", { lineHeight: "1.4", fontWeight: "bold" }],
         "heading-03": ["1.5rem", { lineHeight: "1.4" }],
         "heading-04": ["1.125rem", { lineHeight: "1.4" }],
-        "heading-05": ["1rem", { lineHeight: "1.4" }],
+        "heading-05": ["1rem", { lineHeight: "1.4", fontWeight: "bold" }],
         "body-xxl": ["1.5rem", { lineHeight: "1.5" }],
         "body-xl": ["1.25rem", { lineHeight: "1.5" }],
         "body-large": ["1.125rem", { lineHeight: "1.5" }],
