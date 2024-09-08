@@ -3,7 +3,7 @@ import { Carousel } from "flowbite-react";
 import xbox from "../../assets/xbox.png";
 import pixel from "../../assets/pixel.png";
 import buds from "../../assets/buds.png";
-import Slide from "../common/Slide";
+import { Slide } from "../common/Slide";
 import { ArrowRight } from "@phosphor-icons/react";
 
 const HeroSection = () => {

@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className="flex items-center bg-white px-2 w-2/3 md:w-1/3">
           <input
             type="text"
-            className="text-gray text-sm bg-transparent border-none focus:outline-none focus:ring-0 w-full"
+            className="text-black/80 text-sm bg-transparent border-none focus:outline-none focus:ring-0 w-full"
             placeholder="Search for anything..."
           />
           <MagnifyingGlass size={20} className="text-black" />

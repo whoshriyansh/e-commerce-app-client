@@ -28,15 +28,11 @@ const Categories = () => {
     { img: pixel, name: "Smartphones", link: "/smartphones" },
     { img: buds, name: "Headphones", link: "/headphones" },
     { img: xbox, name: "Gaming Consoles", link: "/gaming-consoles" },
-    { img: buds, name: "Headphones", link: "/headphones" },
-    { img: pixel, name: "Smartphones", link: "/smartphones" },
-    { img: buds, name: "Headphones", link: "/headphones" },
-    // Add more categories as needed
   ];
 
   return (
-    <div className="container mx-auto mt-10">
-      <h2 className="text-black text-heading-01 text-center">
+    <div className="container mx-auto mt-10 flex flex-col items-center gap-5">
+      <h2 className="text-black text-heading-02 text-center">
         Shop by Catergories
       </h2>
       <div className="w-full h-full">

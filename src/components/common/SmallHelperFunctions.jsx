@@ -41,3 +41,15 @@ export const RatingStar = ({ number, RevNumber }) => {
     </div>
   );
 };
+
+export const CompanyButton = ({ btnText, onClickHandler, imgLink }) => {
+  return (
+    <button
+      className="text-black/60 border border-black/30 py-2 rounded-sm flex items-center justify-center gap-4 text-body-medium  w-full"
+      onClick={onClickHandler}
+    >
+      <img src={imgLink} alt="" />
+      {btnText}
+    </button>
+  );
+};

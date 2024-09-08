@@ -37,7 +37,7 @@ const Header = () => {
               <Dropdown
                 label="ENG"
                 inline
-                className="bg-blue border-none rounded-none mb-10"
+                className="bg-white border-none rounded-none mb-10"
               >
                 <Dropdown.Item className="bg-gray text-blue">SPN</Dropdown.Item>
                 <Dropdown.Item className="bg-gray text-blue">JPN</Dropdown.Item>
@@ -47,7 +47,7 @@ const Header = () => {
               <Dropdown
                 label="USD"
                 inline
-                className="bg-blue border-none rounded-none mb-10"
+                className="bg-white border-none rounded-none mb-10"
               >
                 <Dropdown.Item className="bg-gray text-blue">INR</Dropdown.Item>
               </Dropdown>

@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRight } from "@phosphor-icons/react";
 
-const Slide = ({
+export const Slide = ({
   heading,
   subHeading,
   tittle,
@@ -33,5 +33,3 @@ const Slide = ({
     </div>
   );
 };
-
-export default Slide;

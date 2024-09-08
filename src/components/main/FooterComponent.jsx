@@ -9,11 +9,12 @@ const FooterComponent = () => {
     "iPhone",
     "TV",
     "Asus Laptop",
-    "Mackbook",
+    "Macbook",
     "SSD",
     "Power Bank",
     "Smart TV",
   ];
+
   return (
     <div className="bg-black text-white">
       <div className="container mx-auto">
@@ -24,7 +25,9 @@ const FooterComponent = () => {
                 <Footer.LinkGroup col>
                   <h1 className="text-orange text-heading-02">CLICON</h1>
                   <div className="flex flex-col gap-1">
-                    <p className="text-body-sm text-gray/50">Customer Supprt</p>
+                    <p className="text-body-sm text-gray/50">
+                      Customer Support
+                    </p>
                     <p className="text-body-large">+91 6397544812</p>
                   </div>
                   <p className="text-body-sm text-gray/50">
@@ -40,7 +43,7 @@ const FooterComponent = () => {
                 <Footer.LinkGroup col>
                   <Footer.Link href="#">Computer & Language</Footer.Link>
                   <Footer.Link href="#">SmartPhone</Footer.Link>
-                  <Footer.Link href="#">HeadPhones</Footer.Link>
+                  <Footer.Link href="#">Headphones</Footer.Link>
                   <Footer.Link href="#">Camera and Photo</Footer.Link>
                 </Footer.LinkGroup>
               </div>
@@ -48,18 +51,18 @@ const FooterComponent = () => {
                 <Footer.Title title="Quick Links" />
                 <Footer.LinkGroup col>
                   <Footer.Link href="#">Shop Product</Footer.Link>
-                  <Footer.Link href="#">Shooping Cart</Footer.Link>
+                  <Footer.Link href="#">Shopping Cart</Footer.Link>
                   <Footer.Link href="#">WishList</Footer.Link>
                   <Footer.Link href="#">Compare</Footer.Link>
                 </Footer.LinkGroup>
               </div>
               <div>
                 <Footer.Title title="POPULAR TAGS" />
-                <Footer.LinkGroup className="gap-2" row>
+                <div className="flex flex-wrap gap-2">
                   {tags.map((tag, index) => (
                     <Tager name={tag} key={index} />
                   ))}
-                </Footer.LinkGroup>
+                </div>
               </div>
             </div>
           </div>
@@ -67,11 +70,11 @@ const FooterComponent = () => {
       </div>
       <div className="w-full py-3 border-t-2 border-gray/50">
         <p className="text-body-xs text-center text-gray/50 flex items-center justify-center gap-2">
-          Made with by{" "}
+          Made with{" "}
           <span>
             <Heart size={16} color="#fd3030" weight="fill" />
           </span>
-          Shriyansh
+          by Shriyansh
         </p>
       </div>
     </div>
