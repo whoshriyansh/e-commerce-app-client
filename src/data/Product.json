@@ -1,0 +1,231 @@
+[
+  {
+    "id": "product_01",
+    "title": "Apple iPhone 15",
+    "description": "DYNAMIC ISLAND COMES TO IPHONE 15 — Dynamic Island bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else. You can see who’s calling, track your next ride, check your flight status, and so much more.",
+    "price": 69.999,
+    "category": "iPhone",
+    "stock": 1000,
+    "brand": "Apple",
+    "features": [
+      "Super Retina XDR display,6.1‑inch (diagonal) all‑screen OLED display",
+      "Dual 48MP camera system (Ultra Wide and Main)",
+      "12MP TrueDepth camera",
+      "Rated IP68 (maximum depth of 6 metres up to 30 minutes) under IEC standard 60529"
+    ],
+    "images": [
+      "https://m.media-amazon.com/images/I/71657TiFeHL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51brdXeugJL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/712CBkmhLhL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61f4dTush1L._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/617JW0DrG8L._SL1500_.jpg"
+    ],
+    "reviews": {
+      "review_count": 10,
+      "average_rating": 5,
+      "customer_reviews": [
+        {
+          "name": "Sandy Cariappa",
+          "review": "Battery Life is awesome, easily get about a day plus on this, so no Compliants",
+          "rating": 5
+        },
+        {
+          "name": "Rohan narvekar",
+          "review": "First of it looks very very prime quality and nicely fit in your hands. I am an android user still I don't face issue at the time of operating.",
+          "rating": 4
+        },
+        {
+          "name": "stuti",
+          "review": "After so many follow ups finally received a product. Product is good",
+          "rating": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": "product_02",
+    "title": "Apple 2023 MacBook",
+    "description": "The Apple M3 Pro chip, with an up to 12-core CPU and up to 18-core GPU using hardware-accelerated ray tracing, delivers amazing performance for demanding workflows like manipulating gigapixel panoramas or compiling millions of lines of code. ",
+    "price": 799.99,
+    "category": "Laptop",
+    "stock": 12,
+    "brand": "Apple",
+    "features": [
+      "SUPERCHARGED BY M3 PRO OR M3 MAX ",
+      "UP TO 18 HOURS OF BATTERY LIFE ",
+      "RESPONSIVE UNIFIED MEMORY AND STORAGE ",
+      "BRILLIANT PRO DISPLAY "
+    ],
+    "images": [
+      "https://m.media-amazon.com/images/I/61RJn0ofUsL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61x8BQ8-5wL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71JsSoIns1L._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61384664ZVL._SL1500_.jpg"
+    ],
+    "reviews": {
+      "review_count": 4,
+      "average_rating": 4.7,
+      "customer_reviews": [
+        {
+          "name": "Lisa T.",
+          "review": "Excellent picture quality and easy-to-use smart features. Highly recommend!",
+          "rating": 5
+        },
+        {
+          "name": "Michael R.",
+          "review": "Good value for the price, though the remote is a bit tricky to use at first.",
+          "rating": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": "product_03",
+    "title": "ASUS TUF Gaming F15 Laptop",
+    "description": "Play over 100 high-quality PC games, plus new and upcoming blockbusters on day one like Halo Infinite, Forza Horizon 5, and Age of Empires IV with your new FA507RM-HF030WS and one month of Game Pass-including EA Play.",
+    "price": 199.99,
+    "category": "Laptop",
+    "stock": 50,
+    "brand": "Asus",
+    "features": [
+      "Display size 15.6 inches",
+      "operating system Windows 11 Home",
+      "RAM tech DDR5",
+      "graphics co-processor NVIDIA GeForce RTX 4060",
+      "wireless tech Bluetooth, Wi-Fi"
+    ],
+    "images": [
+      "https://m.media-amazon.com/images/I/71ZZ0yHLuYL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81bTroYwHyL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81HH8WLy30L._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81JlnmKqwgL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71RWGd1ZMjL._SL1500_.jpg"
+    ],
+    "reviews": {
+      "review_count": 4,
+      "average_rating": 4,
+      "customer_reviews": [
+        {
+          "name": "Arjun Singh Thakur",
+          "review": "Ram can be upgraded to 64gb, it came with 2x8gb ram sticks ",
+          "rating": 5
+        },
+        {
+          "name": "Anna M.",
+          "review": "Excellent master piece",
+          "rating": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": "product_04",
+    "title": "Samsung S24 ultra",
+    "description": "Experience the future of smartphone technology with the iPhone 14 Pro Max. Featuring a 6.7-inch Super Retina XDR display, A16 Bionic chip, and a 48MP camera system, it delivers outstanding performance and stunning visuals.",
+    "price": 1099.99,
+    "category": "SmartPhone",
+    "stock": 500,
+    "brand": "Samsung",
+    "features": [
+      "6.7‑inch Super Retina XDR display",
+      "A16 Bionic chip",
+      "48MP camera system",
+      "iOS 16"
+    ],
+    "images": [
+      "https://m.media-amazon.com/images/I/71DoeQ838GL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71JLhofuYJL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71ZdFihN4YL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71E-ptCgHcL._SL1500_.jpg"
+    ],
+    "reviews": {
+      "review_count": 20,
+      "average_rating": 4.9,
+      "customer_reviews": [
+        {
+          "name": "John D.",
+          "review": "Best iPhone I’ve used so far. The camera and battery life are fantastic!",
+          "rating": 5
+        },
+        {
+          "name": "Emily R.",
+          "review": "The screen is great, but I miss the home button.",
+          "rating": 4.5
+        }
+      ]
+    }
+  },
+  {
+    "id": "product_05",
+    "title": "Dell XPS 13 Haedphones",
+    "description": "The Dell XPS 13 is one of the thinnest, lightest 13-inch laptops. Powered by Intel’s latest 12th-gen processors, this laptop is designed for on-the-go productivity with a stunning InfinityEdge display.",
+    "price": 1299.99,
+    "category": "Headphones",
+    "stock": 100,
+    "brand": "Dell",
+    "features": [
+      "13.4-inch InfinityEdge display",
+      "12th Gen Intel Core i7 processor",
+      "16GB RAM, 512GB SSD",
+      "Windows 11 Pro"
+    ],
+    "images": [
+      "https://m.media-amazon.com/images/I/41rn2IayYhL._SL1000_.jpg",
+      "https://m.media-amazon.com/images/I/312bb3SsvfL.jpg",
+      "https://m.media-amazon.com/images/I/317ZP1hyLuL.jpg"
+    ],
+    "reviews": {
+      "review_count": 15,
+      "average_rating": 4.8,
+      "customer_reviews": [
+        {
+          "name": "Mark S.",
+          "review": "A powerhouse in a small package. Super light and portable.",
+          "rating": 5
+        },
+        {
+          "name": "Sarah K.",
+          "review": "Great performance, but the battery life could be better.",
+          "rating": 4.3
+        }
+      ]
+    }
+  },
+  {
+    "id": "product_06",
+    "title": "Amazfit GTR 4 New Smart Watch",
+    "description": "Zepp Aura Sleep Guidance & Relaxation Tools: Zepp Aura uses AI to generate sounds that intelligently adjust based on real-time data picked up by your Amazfit GTR 4 New, and provides expert tips, detailed sleep reports and more.",
+    "price": 1299.99,
+    "category": "Smartwatch",
+    "stock": 100,
+    "brand": "Amazfit",
+    "features": [
+      "13.4-inch InfinityEdge display",
+      "12th Gen Intel Core i7 processor",
+      "16GB RAM, 512GB SSD",
+      "Windows 11 Pro"
+    ],
+    "images": [
+      "https://m.media-amazon.com/images/I/71tJuWCYKyL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61yXEFGP3tL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61R4xod8b9L._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71bmoZaq1CL._SL1500_.jpg"
+    ],
+    "reviews": {
+      "review_count": 15,
+      "average_rating": 4.8,
+      "customer_reviews": [
+        {
+          "name": "Mark S.",
+          "review": "A powerhouse in a small package. Super light and portable.",
+          "rating": 5
+        },
+        {
+          "name": "Sarah K.",
+          "review": "Great performance, but the battery life could be better.",
+          "rating": 4.3
+        }
+      ]
+    }
+  }
+]
