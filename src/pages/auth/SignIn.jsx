@@ -7,24 +7,28 @@ import { ArrowRight } from "@phosphor-icons/react";
 import google from "../../assets/svg/google.svg";
 import apple from "../../assets/svg/apple.svg";
 import { CompanyButton } from "../../components/common/SmallHelperFunctions";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/auth/Auth";
 
 const SignIn = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  const { signin } = useAuth();
+  const Navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      await signin({ email, password });
+      Navigate("/user/dashboard");
+    } catch (error) {
+      console.error("Login error:", error);
+      setErrors({ ...errors, general: "Login failed. Please try again." });
+    }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Validate form here and set errors using setErrors
-  };
   return (
     <div className="flex justify-center items-center px-2 py-2 md:p-20">
       <div className="flex flex-col border-black/10 shadow-lg w-full md:w-3/4 lg:w-2/4 xl:w-1/4">
@@ -41,7 +45,6 @@ const SignIn = () => {
           >
             SignIn
           </NavLink>
-
           <NavLink
             to="/signup"
             className={({ isActive }) =>
@@ -55,13 +58,13 @@ const SignIn = () => {
             SignUp
           </NavLink>
         </div>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-5 p-4 ">
+        <form onSubmit={handleLogin} className="flex flex-col gap-5 p-4">
           <TextInputField
             label="Email Address"
             type="email"
             name="email"
-            value={formData.email}
-            onChange={handleInputChange}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
             error={errors.email}
           />
@@ -69,19 +72,22 @@ const SignIn = () => {
             label="Password"
             type="password"
             name="password"
-            value={formData.password}
-            onChange={handleInputChange}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter your password"
             error={errors.password}
           />
-          <button className="bg-orange text-white py-2 rounded-sm flex items-center justify-center gap-4 text-heading-05  w-full">
+          <button
+            type="submit"
+            className="bg-orange text-white py-2 rounded-sm flex items-center justify-center gap-4 text-heading-05 w-full"
+          >
             Submit Now
             <span>
               <ArrowRight size={32} />
             </span>
           </button>
           <div className="text-blue text-body-small text-right">
-            Forgot Password ?
+            Forgot Password?
           </div>
         </form>
         <div className="flex flex-col gap-3 px-4 pb-5">
