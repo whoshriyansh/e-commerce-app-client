@@ -7,27 +7,31 @@ import { ArrowRight } from "@phosphor-icons/react";
 import google from "../../assets/svg/google.svg";
 import apple from "../../assets/svg/apple.svg";
 import { CompanyButton } from "../../components/common/SmallHelperFunctions";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Checkbox, Label } from "flowbite-react";
+import { useAuth } from "../../hooks/auth/Auth";
 
 const SignUp = () => {
-  const [formData, setFormData] = useState({
-    fullname: "",
-    email: "",
-    password: "",
-    confirmpassword: "",
-  });
+  const [fullname, setFullname] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  const { signup } = useAuth();
+  const Navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      await signup({ fullname, username, email, password });
+      Navigate("/user/dashboard");
+    } catch (error) {
+      console.error("SignUp error:", error);
+      setErrors({ ...errors, general: "Signup failed. Please try again." });
+    }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Validate form here and set errors using setErrors
-  };
   return (
     <div className="flex justify-center items-center px-2 py-2 md:p-20">
       <div className="flex flex-col border-black/10 shadow-lg w-full md:w-3/4 lg:w-2/4 xl:w-1/4">
@@ -44,7 +48,6 @@ const SignUp = () => {
           >
             SignIn
           </NavLink>
-
           <NavLink
             to="/signup"
             className={({ isActive }) =>
@@ -58,22 +61,31 @@ const SignUp = () => {
             SignUp
           </NavLink>
         </div>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-5 p-4 ">
+        <form onSubmit={handleLogin} className="flex flex-col gap-5 p-4">
           <TextInputField
             label="Full Name"
-            type="fullname"
+            type="text"
             name="fullname"
-            value={formData.fullname}
-            onChange={handleInputChange}
+            value={fullname}
+            onChange={(e) => setFullname(e.target.value)}
             placeholder="Enter your Full Name"
             error={errors.fullname}
+          />
+          <TextInputField
+            label="Username"
+            type="text"
+            name="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Enter your User Name"
+            error={errors.username}
           />
           <TextInputField
             label="Email Address"
             type="email"
             name="email"
-            value={formData.email}
-            onChange={handleInputChange}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
             error={errors.email}
           />
@@ -81,21 +93,16 @@ const SignUp = () => {
             label="Password"
             type="password"
             name="password"
-            value={formData.password}
-            onChange={handleInputChange}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter your password"
             error={errors.password}
           />
-          <PassInputField
-            label="Confirm Password"
-            type="confirmpassword"
-            name="confirmpassword"
-            value={formData.confirmpassword}
-            onChange={handleInputChange}
-            placeholder="Again type your Password"
-            error={errors.confirmpassword}
-          />
-          <button className="bg-orange text-white py-2 rounded-sm flex items-center justify-center gap-4 text-heading-05  w-full">
+
+          <button
+            type="submit"
+            className="bg-orange text-white py-2 rounded-sm flex items-center justify-center gap-4 text-heading-05 w-full"
+          >
             Submit Now
             <span>
               <ArrowRight size={32} />
@@ -105,7 +112,7 @@ const SignUp = () => {
             <Checkbox
               id="accept"
               className="focus:ring-0 text-orange"
-              defaultChecked:false
+              defaultChecked={false}
             />
             <Label htmlFor="accept" className="flex items-center text-black">
               Are you agree to Clicon&nbsp;
