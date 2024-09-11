@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import React, { createContext, useContext, useMemo } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import api from "../../services/api";
@@ -18,8 +12,8 @@ export const UserProvider = ({ children }) => {
   const signin = async ({ email, password }) => {
     try {
       const res = await api.post("/api/auth/signin", { email, password });
+      console.log(`After Signin ${res.data}`);
       setCookies("token", res.data.token);
-      setCookies("name", res.data.fullname);
       navigate("/user/dashboard");
     } catch (error) {
       throw new Error("Sign-in failed. Please check your credentials.");
@@ -34,9 +28,8 @@ export const UserProvider = ({ children }) => {
         email,
         password,
       });
-      setCookies("token", res.data.token);
-      setCookies("name", res.data.fullname);
-      navigate("/user/dashboard");
+      console.log(`Res from SingUp: ${res}`);
+      navigate("/signin");
     } catch (error) {
       throw new Error("Sign-in failed. Please check your credentials.");
     }
@@ -44,7 +37,7 @@ export const UserProvider = ({ children }) => {
 
   const logout = () => {
     removeCookies("token");
-    removeCookies("name");
+    setUser(null);
     navigate("/signin");
   };
 
